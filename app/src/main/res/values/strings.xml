@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">DeliveryShebin</string>
+    <string name="hint_order_now">Order what you need.. we\'ll take care of the rest!</string>
+    <string name="hint_tracking">Your captain is on the way, track your delivery in real-time!</string>
+    <string name="hint_fast_delivery">Watch out.. we deliver faster than you think!</string>
+    <string name="hint_items_available">Need food, documents, a charger? We’ve got it all!</string>
+    <string name="hint_custom_request">Can’t find what you\'re looking for? Let us know!</string>
+    <string name="hint_coverage">We cover all of Shibin.. and growing soon!</string>
+    <string name="hint_captain_nearby">A captain is nearby.. Try placing an order!</string>
+    <string name="hint_captain_ready">Ready for your shift? Turn on GPS and start moving!</string>
+    <string name="hint_earn_more">Each delivery = more cash in your pocket 💰</string>
+    <string name="hint_deliver_fast">This order is waiting.. Get it delivered fast!</string>
+    <string name="hint_work_flexible">Work when you want, rest when you want ⏱️</string>
+    <string name="hint_support">Need help? Our support team is here for you.</string>
+    <string name="hint_coming_soon">More areas coming soon.. stay tuned!</string>
+    <string name="hint_hero_captain">Cycling today? You\'re our hero! 💪🚲</string>
+    <string name="hint_new_order">New order arrived.. Accept or decline?</string>
+    <string name="hint_searching_captain">Looking for an available captain.. One moment.</string>
+    <string name="hint_loading_orders">Loading your trips.. Get ready to go!</string>
+    <string name="hint_no_orders">No orders now.. Stay online and be ready 🔔</string>
+    <string name="hint_onboarding_1">Delivery Shibin – Your trip is faster, your work is closer!</string>
+    <string name="hint_onboarding_2">Deliver what you love.. without leaving your place!</string>
+    <string name="hint_onboarding_3">Earn money with just a bike, a phone, and your time!</string>
+    <string name="hint_onboarding_4">All of Shibin is now in your pocket! 🧭📦</string>
+</resources>
