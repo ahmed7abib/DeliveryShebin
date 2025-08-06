@@ -22,6 +22,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.ahmed.group.deliveryshebin.R
+import com.ahmed.group.deliveryshebin.utils.getAppLogo
 import com.ahmed.group.deliveryshebin.utils.theme.Primary
 import com.ahmed.group.deliveryshebin.utils.theme.White
 import kotlinx.coroutines.delay
@@ -50,7 +51,7 @@ fun SplashScreen(
         ) {
             Image(
                 contentDescription = "Logo",
-                painter = painterResource(id = R.drawable.ic_logo),
+                painter = painterResource(getAppLogo()),
                 modifier = Modifier
                     .size(180.dp)
                     .clip(CircleShape)
