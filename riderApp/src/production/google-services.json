@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "585294104563",
+    "project_id": "deliveryshebin-rider-prod",
+    "storage_bucket": "deliveryshebin-rider-prod.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:585294104563:android:f54d8f4808f6baf0937486",
+        "android_client_info": {
+          "package_name": "com.habib.group.deliveryshebin.rider"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDbdP_Wwuy3xVzK84XgwP-pgyTAlWjSkM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "816897019689",
+    "project_id": "deliveryshebin-client-staging",
+    "storage_bucket": "deliveryshebin-client-staging.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:816897019689:android:c1c72c74ee07ee0da47138",
+        "android_client_info": {
+          "package_name": "com.habib.group.deliveryshebin.client.staging"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBp5rBzK7zlOedB4t37-xsb4u_ZEgWTqAY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

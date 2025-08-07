@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1046642376175",
+    "project_id": "deliveryshebin-client-prod",
+    "storage_bucket": "deliveryshebin-client-prod.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1046642376175:android:7a677fadb88c7c5099ca1a",
+        "android_client_info": {
+          "package_name": "com.habib.group.deliveryshebin.client"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2QUxZtidDabdmDwD7rEqF_9jJzR2Nav4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

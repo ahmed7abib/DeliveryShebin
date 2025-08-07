@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "51620337034",
+    "project_id": "deliveryshebin-rider-staging",
+    "storage_bucket": "deliveryshebin-rider-staging.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:51620337034:android:2dd02b4b9a4da64af3e473",
+        "android_client_info": {
+          "package_name": "com.habib.group.deliveryshebin.rider.staging"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9n8iveipsYmz-5iitfTV-hkCCsaaTFKk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
