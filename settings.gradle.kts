@@ -23,4 +23,4 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "DeliveryShebin"
-include(":app")
+include(":riderApp")
