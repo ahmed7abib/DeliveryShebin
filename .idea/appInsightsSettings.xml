@@ -22,10 +22,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.habib.group.deliveryshebin.rider.staging" />
+                  <option name="mobileSdkAppId" value="1:48049675658:android:418d8eaf97c4bac1d0bc73" />
+                  <option name="projectId" value="deliveryshebin-staging" />
+                  <option name="projectNumber" value="48049675658" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

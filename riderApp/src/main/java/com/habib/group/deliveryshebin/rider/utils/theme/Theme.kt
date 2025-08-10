@@ -11,7 +11,7 @@ import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.TextStyle
-import com.habib.group.deliveryshebin.rider.utils.customFontFamily
+import com.habib.group.deliveryshebin.rider.utils.arabicFontFamily
 
 
 private val DarkColorScheme = darkColorScheme(
@@ -30,7 +30,7 @@ private val LightColorScheme = lightColorScheme(
 fun DeliveryShebinTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     dynamicColor: Boolean = true,
-    content: @Composable () -> Unit
+    content: @Composable () -> Unit,
 ) {
     val colorScheme = when {
         dynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
@@ -43,9 +43,9 @@ fun DeliveryShebinTheme(
     }
 
     val customTypography = Typography(
-        bodyLarge = TextStyle(fontFamily = customFontFamily()),
-        titleLarge = TextStyle(fontFamily = customFontFamily()),
-        labelSmall = TextStyle(fontFamily = customFontFamily())
+        bodyLarge = TextStyle(fontFamily = arabicFontFamily()),
+        titleLarge = TextStyle(fontFamily = arabicFontFamily()),
+        labelSmall = TextStyle(fontFamily = arabicFontFamily())
     )
 
     MaterialTheme(

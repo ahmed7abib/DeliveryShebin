@@ -22,14 +22,13 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.habib.group.deliveryshebin.rider.R
-import com.habib.group.deliveryshebin.rider.utils.getAppLogo
 import com.habib.group.deliveryshebin.rider.utils.theme.Primary
 import com.habib.group.deliveryshebin.rider.utils.theme.White
 import kotlinx.coroutines.delay
 
 @Composable
 fun SplashScreen(
-    onSplashFinished: () -> Unit
+    onSplashFinished: () -> Unit,
 ) {
 
     val context = LocalContext.current
@@ -51,7 +50,7 @@ fun SplashScreen(
         ) {
             Image(
                 contentDescription = "Logo",
-                painter = painterResource(getAppLogo()),
+                painter = painterResource(R.drawable.ic_logo),
                 modifier = Modifier
                     .size(180.dp)
                     .clip(CircleShape)

@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "1046642376175",
-    "project_id": "deliveryshebin-client-prod",
-    "storage_bucket": "deliveryshebin-client-prod.firebasestorage.app"
+    "project_number": "520034905964",
+    "project_id": "deliveryshebin-production",
+    "storage_bucket": "deliveryshebin-production.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1046642376175:android:7a677fadb88c7c5099ca1a",
+        "mobilesdk_app_id": "1:520034905964:android:196bac03527efb7f060d49",
         "android_client_info": {
           "package_name": "com.habib.group.deliveryshebin.client"
         }
@@ -15,7 +15,26 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyD2QUxZtidDabdmDwD7rEqF_9jJzR2Nav4"
+          "current_key": "AIzaSyCFBLxC0cd9I84BnCMnLWtAzjsLD3X8n94"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:520034905964:android:f8edd4d5e1314f77060d49",
+        "android_client_info": {
+          "package_name": "com.habib.group.deliveryshebin.rider"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFBLxC0cd9I84BnCMnLWtAzjsLD3X8n94"
         }
       ],
       "services": {
