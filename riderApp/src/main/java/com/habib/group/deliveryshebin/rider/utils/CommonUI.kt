@@ -7,4 +7,4 @@ import androidx.compose.ui.text.font.FontWeight
 import com.habib.group.deliveryshebin.rider.R
 
 @Composable
-fun arabicFontFamily() = FontFamily(Font(R.font.arabic_font, FontWeight.Normal))
+fun arabicFontFamily() = FontFamily(Font(R.font.arabic_font_bold, FontWeight.Normal))

@@ -33,7 +33,7 @@ private fun MainApp() {
     ) {
         composable(startDestination) {
             SplashScreen {
-                navController.navigate(getStartedDestination)
+                navController.navigate(loginDestination)
             }
         }
 

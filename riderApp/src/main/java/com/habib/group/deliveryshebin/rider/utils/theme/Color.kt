@@ -9,4 +9,5 @@ val Tertiary = Color(0xFFa36a4d)   // Icons, FAB, status tags, contrast.
 
 val Black = Color(0xFF000000)
 val White = Color(0xFFFFFFFF)
+val Orange = Color(0xFFfb9123)
 val OffWhite = Color(0xFFf7f4ee)

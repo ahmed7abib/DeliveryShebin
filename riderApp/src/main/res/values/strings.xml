@@ -1,26 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">دليفري شبين - سائقين</string>
-    <string name="hint_order_now">اطلب اللي محتاجه .. إحنا هنوصلهولك!</string>
-    <string name="hint_tracking">الكابتن في الطريق، تابع الطلب لحظة بلحظة!</string>
-    <string name="hint_fast_delivery">خد بالك .. التوصيل أسرع مما تتخيل!</string>
-    <string name="hint_items_available">عايز أكل، أوراق، شاحن؟ كله متاح!</string>
-    <string name="hint_custom_request">مش لاقي اللي بتدور عليه؟ قولنا عليه!</string>
-    <string name="hint_coverage">إحنا شغالين في شبين كلها .. ولسه مكملين!</string>
-    <string name="hint_captain_nearby">في كابتن قريب منك .. جرّب تطلب حاجة!</string>
-    <string name="hint_captain_ready">جاهز تبدأ الشغل؟ شغل الـ GPS وابدأ التحرك!</string>
-    <string name="hint_earn_more">كل توصيلة = فلوس أكتر في جيبك 💰</string>
-    <string name="hint_deliver_fast">الطلب مستني .. وصّله بسرعة!</string>
-    <string name="hint_work_flexible">اشتغل وقت ما تحب، وارتاح وقت ما تحب ⏱️</string>
-    <string name="hint_support">محتاج مساعدة؟ الدعم معاك في أي وقت.</string>
-    <string name="hint_coming_soon">مناطق جديدة قريب .. استنى المفاجآت!</string>
-    <string name="hint_hero_captain">راكب عجل النهاردة؟ إنت بطلنا! 💪🚲</string>
-    <string name="hint_new_order">طلب جديد وصلك .. تقبل ولا ترفض؟</string>
-    <string name="hint_searching_captain">بندور على كابتن متاح .. ثانية واحدة.</string>
-    <string name="hint_loading_orders">بنجهز رحلاتك .. خليك جاهز!</string>
-    <string name="hint_no_orders">مافيش طلبات دلوقتي .. خليك أونلاين ومستعد 🔔</string>
-    <string name="hint_onboarding_1">دليفري شبين – مشوارك أسرع وشغلك أقرب!</string>
-    <string name="hint_onboarding_2">وصّل اللي بتحبه .. من غير ما تتحرك من مكانك!</string>
-    <string name="hint_onboarding_3">اكسب فلوس بعجلة، موبايل، ووقتك!</string>
-    <string name="hint_onboarding_4">شبين كلها بقت في جيبك! 🧭📦</string>
-    <string name="hint_easy_delivery">سيبها علينا .. هنسهلها عليك!</string>
+    <string name="splash_hint">سيبها علينا .. هنسهلها عليك</string>
+    <string name="delivery_shebin">دليفري شبين</string>
+    <string name="google_sign_in">تسجيل الدخول باستخدام جوجل</string>
+    <string name="privacy_policy_hint">بتسجيلك الدخول انت توافق علي شروط الاستخدام وسياسة الخصوصية</string>
+    <string name="login_hint_1">توصيل أسهل وأسرع لأهالي شبين القناطر</string>
+    <string name="login_hint_2">انضم الينا وابدأ في استقبال وتوصيل الطلبات بسهولة</string>
+    <string name="login_hint_3">الق نظرة وقم بتسجيل الدخول لاحقا</string>
 </resources>

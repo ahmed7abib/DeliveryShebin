@@ -64,7 +64,7 @@ fun SplashScreen(
                 fontSize = 18.sp,
                 textAlign = TextAlign.Center,
                 modifier = Modifier.align(Alignment.CenterHorizontally),
-                text = context.getString(R.string.hint_easy_delivery),
+                text = context.getString(R.string.splash_hint),
             )
         }
     }
