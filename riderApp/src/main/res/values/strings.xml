@@ -8,4 +8,19 @@
     <string name="login_hint_1">توصيل أسهل وأسرع لأهالي شبين القناطر</string>
     <string name="login_hint_2">انضم الينا وابدأ في استقبال وتوصيل الطلبات بسهولة</string>
     <string name="login_hint_3">الق نظرة وقم بتسجيل الدخول لاحقا</string>
+    <string name="onboarding_hint_1">انضم بسهولة</string>
+    <string name="onboarding_hint_2">اكسب دخل اضافي</string>
+    <string name="onboarding_hint_3">انت تحدد وقت عملك</string>
+    <string name="onboarding_hint_4">سجل دخولك وابدأ عملك الخاص فورا</string>
+    <string name="onboarding_hint_5">كل طلب توصيل يعني زيادة في أرباحك</string>
+    <string name="onboarding_hint_6">اشتغل في الوقت الي يناسبك</string>
+    <string name="lets_go_1">ابدأ الأن</string>
+    <string name="lets_go">يلا بينا ؟</string>
+    <string name="rider_details">بيانات السائق</string>
+    <string name="personal_card">البطاقة الشخصية</string>
+    <string name="vehicle_details">بيانات المركبة</string>
+    <string name="user_name">اسم السائق</string>
+    <string name="phone">رقم التليفون</string>
+    <string name="email">الايميل</string>
+    <string name="submit">تأكيد</string>
 </resources>
