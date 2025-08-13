@@ -24,4 +24,10 @@
     <string name="email">الايميل</string>
     <string name="submit">تأكيد</string>
     <string name="complete_registeration">استكمال البيانات</string>
+    <string name="back_id_image">التقط صورة خلفية</string>
+    <string name="front_id_image">التقط صورة أمامية</string>
+    <string name="pic_vehicle_image">التقط صورة للمركبة</string>
+    <string name="becycle">عجلة</string>
+    <string name="motocycle">موتوسيكل</string>
+    <string name="toktok">توكتوك</string>
 </resources>

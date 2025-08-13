@@ -1,9 +1,7 @@
 package com.habib.group.deliveryshebin.rider.features.auth.register
 
-import android.net.Uri
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
+import androidx.compose.foundation.gestures.Orientation
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -12,35 +10,27 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Call
-import androidx.compose.material3.Icon
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
-import coil.compose.rememberAsyncImagePainter
+import androidx.constraintlayout.compose.Dimension
 import com.habib.group.deliveryshebin.rider.R
+import com.habib.group.deliveryshebin.rider.features.auth.register.domain.Vehicle
 import com.habib.group.deliveryshebin.rider.utils.commonUI.CustomButton
+import com.habib.group.deliveryshebin.rider.utils.commonUI.CustomRadioButton
 import com.habib.group.deliveryshebin.rider.utils.commonUI.EditText
 import com.habib.group.deliveryshebin.rider.utils.commonUI.HorizontalSpace
 import com.habib.group.deliveryshebin.rider.utils.commonUI.VerticalSpace
+import com.habib.group.deliveryshebin.rider.utils.imagePicker.ImagePickerBlock
 import com.habib.group.deliveryshebin.rider.utils.theme.Black
 import com.habib.group.deliveryshebin.rider.utils.theme.Orange
 import com.habib.group.deliveryshebin.rider.utils.theme.Primary
@@ -84,10 +74,12 @@ fun RegisterScreen() {
                     start.linkTo(parent.start)
                     top.linkTo(toolbar.bottom)
                     bottom.linkTo(submitBtn.top)
+                    height = Dimension.fillToConstraints
                 }
-                .padding(24.dp),
+                .verticalScroll(rememberScrollState())
+                .padding(vertical = 16.dp, horizontal = 24.dp),
             horizontalAlignment = Alignment.End,
-            verticalArrangement = Arrangement.Center
+            verticalArrangement = Arrangement.Top
         ) {
             UserDataSection()
 
@@ -107,7 +99,7 @@ fun RegisterScreen() {
                     start.linkTo(parent.start)
                     bottom.linkTo(parent.bottom)
                 }
-                .padding(24.dp),
+                .padding(horizontal = 24.dp, vertical = 16.dp),
             textSize = 18.sp,
             textColor = White,
             backgroundColor = Orange,
@@ -120,7 +112,12 @@ fun RegisterScreen() {
 
 @Composable
 fun UserDataSection() {
-    Text(R.string.rider_details)
+    Text(
+        color = Black,
+        fontSize = 20.sp,
+        textAlign = TextAlign.Right,
+        text = stringResource(R.string.rider_details)
+    )
 
     VerticalSpace(8.dp)
 
@@ -149,82 +146,63 @@ fun UserDataSection() {
 
 @Composable
 fun CardIDSection() {
-    Text(R.string.personal_card)
+    Text(
+        color = Black,
+        fontSize = 20.sp,
+        textAlign = TextAlign.Right,
+        text = stringResource(R.string.personal_card)
+    )
 
     VerticalSpace(8.dp)
 
     Row {
-        PickImageBlock(
+        ImagePickerBlock(
             modifier = Modifier
                 .weight(1f)
-                .height(150.dp)
-        ) {
-
+                .height(150.dp),
+            text = stringResource(R.string.back_id_image)
+        ) { uri ->
         }
 
         HorizontalSpace(8.dp)
 
-        PickImageBlock(
+        ImagePickerBlock(
             modifier = Modifier
                 .weight(1f)
-                .height(150.dp)
-        ) {
-
+                .height(150.dp),
+            text = stringResource(R.string.front_id_image)
+        ) { uri ->
         }
     }
 }
 
 @Composable
 fun VehicleSection() {
-    Text(R.string.vehicle_details)
-    VerticalSpace(8.dp)
-}
-
-@Composable
-fun PickImageBlock(
-    modifier: Modifier = Modifier,
-    onImageSelected: (Uri) -> Unit
-) {
-    var selectedImage by remember { mutableStateOf<Uri?>(null) }
-
-    Box(
-        modifier = modifier
-            .clip(RoundedCornerShape(8.dp))
-            .background(Color.Gray.copy(alpha = 0.2f))
-    ) {
-        Image(
-            contentDescription = null,
-            contentScale = ContentScale.Crop,
-            modifier = Modifier.fillMaxSize(),
-            painter = rememberAsyncImagePainter(model = selectedImage)
-        )
-
-        Icon(
-            tint = Black,
-            contentDescription = null,
-            painter = painterResource(R.drawable.ic_camera),
-            modifier = Modifier
-                .size(60.dp)
-                .align(Alignment.Center)
-                .clickable {
-                    // هنا هتفتح الكاميرا أو المعرض
-                    // و أول ما ترجع Uri تخزنه
-                    // مثال (تجريبي):
-                    // val uri = ...
-                    // selectedImage = uri
-                    // imageSelected(uri)
-                }
-                .padding(8.dp)
-        )
-    }
-}
-
-@Composable
-fun Text(reg: Int) {
     Text(
         color = Black,
         fontSize = 20.sp,
         textAlign = TextAlign.Right,
-        text = stringResource(reg)
+        text = stringResource(R.string.vehicle_details)
     )
+
+    VerticalSpace(8.dp)
+
+    CustomRadioButton(
+        options = Vehicle.entries,
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 2.dp),
+        orientation = Orientation.Horizontal
+    ) { selectedVehicle ->
+    }
+
+    VerticalSpace(8.dp)
+
+    ImagePickerBlock(
+        modifier = Modifier
+            .fillMaxWidth(1f)
+            .height(150.dp),
+        text = stringResource(R.string.pic_vehicle_image)
+    ) { uri ->
+    }
 }
