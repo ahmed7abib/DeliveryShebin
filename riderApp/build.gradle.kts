@@ -90,6 +90,9 @@ dependencies {
     // Navigation
     implementation(libs.navigation.compose)
 
+    // Coil
+    implementation(libs.coil.compose)
+
     // Testing
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

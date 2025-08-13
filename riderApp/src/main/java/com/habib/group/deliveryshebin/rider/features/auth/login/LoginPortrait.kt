@@ -2,23 +2,15 @@ package com.habib.group.deliveryshebin.rider.features.auth.login
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -31,6 +23,8 @@ import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
 import com.habib.group.deliveryshebin.rider.R
 import com.habib.group.deliveryshebin.rider.features.splash.Header
+import com.habib.group.deliveryshebin.rider.utils.commonUI.CustomButton
+import com.habib.group.deliveryshebin.rider.utils.commonUI.VerticalSpace
 import com.habib.group.deliveryshebin.rider.utils.theme.Black
 import com.habib.group.deliveryshebin.rider.utils.theme.Orange
 import com.habib.group.deliveryshebin.rider.utils.theme.Primary
@@ -40,7 +34,7 @@ import com.habib.group.deliveryshebin.rider.utils.theme.White
 @Composable
 fun LoginPortrait(
     onSignInClick: () -> Unit,
-    onIgnoreClicked: () -> Unit,
+    onIgnoreClicked: () -> Unit
 ) {
 
     ConstraintLayout(
@@ -48,8 +42,7 @@ fun LoginPortrait(
             .fillMaxSize()
             .background(brush = Brush.verticalGradient(colors = listOf(Primary, Primary)))
             .padding(
-                horizontal = 16.dp,
-                vertical = 24.dp
+                horizontal = 16.dp, vertical = 24.dp
             )
     ) {
 
@@ -66,7 +59,7 @@ fun LoginPortrait(
             Header()
         }
 
-        Spacer(modifier = Modifier.height(16.dp))
+        VerticalSpace(16.dp)
 
         Column(
             modifier = Modifier.constrainAs(logo) {
@@ -79,7 +72,7 @@ fun LoginPortrait(
             PortraitLogoSection()
         }
 
-        Spacer(modifier = Modifier.height(16.dp))
+        VerticalSpace(16.dp)
 
         Column(
             modifier = Modifier.constrainAs(buttons) {
@@ -106,52 +99,26 @@ fun LoginPortrait(
 
 @Composable
 fun ButtonsSection(onSignInClick: () -> Unit, onIgnoreClicked: () -> Unit) {
-    Row(
-        modifier = Modifier
-            .padding(horizontal = 16.dp)
-            .fillMaxWidth()
-            .height(50.dp)
-            .clip(RoundedCornerShape(8.dp))
-            .background(White)
-            .padding(horizontal = 12.dp)
-            .clickable { onSignInClick() },
-        verticalAlignment = Alignment.CenterVertically
+
+    CustomButton(
+        textColor = Black,
+        backgroundColor = White,
+        icon = R.drawable.ic_google,
+        modifier = Modifier.padding(horizontal = 16.dp),
+        text = stringResource(R.string.google_sign_in),
     ) {
-        Image(
-            contentDescription = "Google Icon",
-            modifier = Modifier.size(32.dp),
-            painter = painterResource(R.drawable.ic_google)
-        )
-
-        Spacer(Modifier.width(8.dp))
-
-        Text(
-            text = stringResource(R.string.google_sign_in),
-            color = Black,
-            fontSize = 14.sp,
-            textAlign = TextAlign.Center,
-            modifier = Modifier.weight(1f)
-        )
+        onSignInClick()
     }
 
-    Spacer(modifier = Modifier.height(8.dp))
+    VerticalSpace(8.dp)
 
-    Box(
-        modifier = Modifier
-            .padding(horizontal = 16.dp)
-            .fillMaxWidth()
-            .height(50.dp)
-            .clip(RoundedCornerShape(8.dp))
-            .background(Orange)
-            .clickable { onIgnoreClicked() },
-        contentAlignment = Alignment.Center
+    CustomButton(
+        textColor = White,
+        backgroundColor = Orange,
+        modifier = Modifier.padding(horizontal = 16.dp),
+        text = stringResource(R.string.ignore_sign_in),
     ) {
-        Text(
-            color = White,
-            fontSize = 14.sp,
-            textAlign = TextAlign.Center,
-            text = stringResource(R.string.login_hint_3)
-        )
+        onIgnoreClicked()
     }
 }
 
@@ -165,7 +132,7 @@ private fun PortraitLogoSection() {
             .height(200.dp)
     )
 
-    Spacer(modifier = Modifier.height(8.dp))
+    VerticalSpace(8.dp)
 
     Text(
         color = White,

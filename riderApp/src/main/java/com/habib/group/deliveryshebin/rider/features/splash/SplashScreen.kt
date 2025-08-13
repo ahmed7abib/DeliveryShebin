@@ -7,7 +7,6 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -30,6 +29,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import com.habib.group.deliveryshebin.rider.R
 import com.habib.group.deliveryshebin.rider.onBoardingDestination
+import com.habib.group.deliveryshebin.rider.utils.commonUI.VerticalSpace
 import com.habib.group.deliveryshebin.rider.utils.theme.Primary
 import com.habib.group.deliveryshebin.rider.utils.theme.White
 import kotlinx.coroutines.delay
@@ -74,7 +74,7 @@ fun SplashScreen(navController: NavHostController) {
                 painter = painterResource(R.drawable.ic_logo_no_txt)
             )
 
-            Spacer(modifier = Modifier.height(8.dp))
+            VerticalSpace(8.dp)
 
             Column(
                 modifier = Modifier.offset(y = headerOffsetY.value.dp),
@@ -96,7 +96,7 @@ fun Header() {
         fontWeight = FontWeight.Bold
     )
 
-    Spacer(modifier = Modifier.height(8.dp))
+    VerticalSpace(8.dp)
 
     Text(
         text = stringResource(R.string.login_hint_1),

@@ -7,5 +7,5 @@
     <string name="privacy_policy_hint">بتسجيلك الدخول انت توافق علي شروط الاستخدام وسياسة الخصوصية</string>
     <string name="login_hint_1">توصيل أسهل وأسرع لأهالي شبين القناطر</string>
     <string name="login_hint_2">انضم الينا وابدأ في استقبال وتوصيل الطلبات بسهولة</string>
-    <string name="login_hint_3">الق نظرة وقم بتسجيل الدخول لاحقا</string>
+    <string name="ignore_sign_in">الق نظرة وقم بتسجيل الدخول لاحقا</string>
 </resources>

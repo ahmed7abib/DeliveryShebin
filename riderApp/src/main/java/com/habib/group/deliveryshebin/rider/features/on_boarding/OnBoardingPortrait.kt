@@ -3,12 +3,10 @@ package com.habib.group.deliveryshebin.rider.features.on_boarding
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -29,11 +27,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
 import com.habib.group.deliveryshebin.rider.R
+import com.habib.group.deliveryshebin.rider.utils.commonUI.CustomButton
+import com.habib.group.deliveryshebin.rider.utils.commonUI.VerticalSpace
 import com.habib.group.deliveryshebin.rider.utils.theme.Black
 import com.habib.group.deliveryshebin.rider.utils.theme.Orange2
 import com.habib.group.deliveryshebin.rider.utils.theme.Primary
@@ -69,13 +68,13 @@ fun OnBoardingPortrait(onLetsGoClick: () -> Unit) {
         ) {
             Text(
                 color = White,
-                fontSize = 28.sp,
+                fontSize = 24.sp,
                 text = stringResource(currentTitleReg),
                 modifier = Modifier.align(Alignment.Center)
             )
         }
 
-        Spacer(modifier = Modifier.height(16.dp))
+        VerticalSpace(16.dp)
 
         Column(
             modifier = Modifier.constrainAs(body) {
@@ -102,10 +101,18 @@ fun OnBoardingPortrait(onLetsGoClick: () -> Unit) {
                         painter = painterResource(currentPage.image),
                     )
 
-                    Spacer(modifier = Modifier.height(8.dp))
+                    VerticalSpace(8.dp)
 
                     if (currentPage.pageHint == R.string.lets_go) {
-                        LetsGoButton { onLetsGoClick() }
+                        CustomButton(
+                            textSize = 18.sp,
+                            textColor = White,
+                            backgroundColor = Orange2,
+                            text = stringResource(R.string.lets_go),
+                            modifier = Modifier.padding(horizontal = 60.dp)
+                        ) {
+                            onLetsGoClick()
+                        }
                     } else {
                         Text(
                             color = Black,
@@ -117,7 +124,7 @@ fun OnBoardingPortrait(onLetsGoClick: () -> Unit) {
             }
         }
 
-        Spacer(modifier = Modifier.height(16.dp))
+        VerticalSpace(16.dp)
 
         Row(
             modifier = Modifier
@@ -144,27 +151,6 @@ fun OnBoardingPortrait(onLetsGoClick: () -> Unit) {
                 )
             }
         }
-    }
-}
-
-@Composable
-fun LetsGoButton(onLetsGoClick: () -> Unit) {
-    Box(
-        modifier = Modifier
-            .padding(horizontal = 60.dp)
-            .fillMaxWidth()
-            .height(50.dp)
-            .clip(RoundedCornerShape(8.dp))
-            .background(Orange2)
-            .clickable { onLetsGoClick() },
-        contentAlignment = Alignment.Center
-    ) {
-        Text(
-            color = Black,
-            fontSize = 18.sp,
-            textAlign = TextAlign.Center,
-            text = stringResource(R.string.lets_go)
-        )
     }
 }
 
