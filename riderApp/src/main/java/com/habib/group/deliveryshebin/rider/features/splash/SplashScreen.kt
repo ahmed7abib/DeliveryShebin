@@ -76,33 +76,33 @@ fun SplashScreen(navController: NavHostController) {
 
             VerticalSpace(8.dp)
 
-            Column(
-                modifier = Modifier.offset(y = headerOffsetY.value.dp),
-                horizontalAlignment = Alignment.CenterHorizontally
-            ) {
-                Header()
-            }
+            Header(modifier = Modifier.offset(y = headerOffsetY.value.dp))
         }
     }
 }
 
 @Composable
-fun Header() {
-    Text(
-        text = stringResource(R.string.delivery_shebin),
-        color = White,
-        fontSize = 32.sp,
-        textAlign = TextAlign.Center,
-        fontWeight = FontWeight.Bold
-    )
+fun Header(modifier: Modifier) {
+    Column(
+        modifier = modifier,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Text(
+            text = stringResource(R.string.delivery_shebin),
+            color = White,
+            fontSize = 32.sp,
+            textAlign = TextAlign.Center,
+            fontWeight = FontWeight.Bold
+        )
 
-    VerticalSpace(8.dp)
+        VerticalSpace(8.dp)
 
-    Text(
-        text = stringResource(R.string.login_hint_1),
-        color = White,
-        fontSize = 18.sp,
-        textAlign = TextAlign.Center,
-        fontStyle = FontStyle.Normal
-    )
+        Text(
+            text = stringResource(R.string.login_hint_1),
+            color = White,
+            fontSize = 18.sp,
+            textAlign = TextAlign.Center,
+            fontStyle = FontStyle.Normal
+        )
+    }
 }
