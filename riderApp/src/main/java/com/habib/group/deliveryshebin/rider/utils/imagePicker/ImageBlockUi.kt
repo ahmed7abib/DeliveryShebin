@@ -74,7 +74,7 @@ fun ImagePickerBlock(
     }
 
     val clip = when (blockShape) {
-        BlockShape.CIRCLE_BLOCK -> CircleShape
+        BlockShape.SELFIE -> CircleShape
         BlockShape.RECTANGLE_BLOCK -> RoundedCornerShape(8.dp)
     }
 
@@ -92,8 +92,8 @@ fun ImagePickerBlock(
 
         if (cameraIconVisibility) {
             Column(
-                modifier = Modifier.align(Alignment.Center),
                 verticalArrangement = Arrangement.Center,
+                modifier = Modifier.align(Alignment.Center),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 Icon(
@@ -111,8 +111,8 @@ fun ImagePickerBlock(
         } else {
 
             val align = when (blockShape) {
+                BlockShape.SELFIE -> Alignment.BottomCenter
                 BlockShape.RECTANGLE_BLOCK -> Alignment.TopEnd
-                BlockShape.CIRCLE_BLOCK -> Alignment.BottomCenter
             }
 
             Image(
@@ -146,4 +146,4 @@ fun ImagePickerBlock(
     }
 }
 
-enum class BlockShape { CIRCLE_BLOCK, RECTANGLE_BLOCK }
+enum class BlockShape { SELFIE, RECTANGLE_BLOCK }

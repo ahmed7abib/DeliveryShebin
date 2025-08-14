@@ -119,7 +119,7 @@ fun UserDataSection() {
             modifier = Modifier
                 .size(150.dp)
                 .align(Alignment.CenterHorizontally),
-            blockShape = BlockShape.CIRCLE_BLOCK,
+            blockShape = BlockShape.SELFIE,
             text = stringResource(R.string.pic_personal_image)
         ) { uri ->
         }
