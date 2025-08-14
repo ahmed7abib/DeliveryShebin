@@ -10,12 +10,16 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
@@ -30,6 +34,7 @@ import com.habib.group.deliveryshebin.rider.utils.commonUI.CustomRadioButton
 import com.habib.group.deliveryshebin.rider.utils.commonUI.EditText
 import com.habib.group.deliveryshebin.rider.utils.commonUI.HorizontalSpace
 import com.habib.group.deliveryshebin.rider.utils.commonUI.VerticalSpace
+import com.habib.group.deliveryshebin.rider.utils.imagePicker.BlockShape
 import com.habib.group.deliveryshebin.rider.utils.imagePicker.ImagePickerBlock
 import com.habib.group.deliveryshebin.rider.utils.theme.Black
 import com.habib.group.deliveryshebin.rider.utils.theme.Orange
@@ -78,8 +83,6 @@ fun RegisterScreen() {
                 }
                 .verticalScroll(rememberScrollState())
                 .padding(vertical = 16.dp, horizontal = 24.dp),
-            horizontalAlignment = Alignment.End,
-            verticalArrangement = Arrangement.Top
         ) {
             UserDataSection()
 
@@ -112,97 +115,119 @@ fun RegisterScreen() {
 
 @Composable
 fun UserDataSection() {
-    Text(
-        color = Black,
-        fontSize = 20.sp,
-        textAlign = TextAlign.Right,
-        text = stringResource(R.string.rider_details)
-    )
+    Column(
+        horizontalAlignment = Alignment.End,
+        verticalArrangement = Arrangement.Center,
+    ) {
 
-    VerticalSpace(8.dp)
+        ImagePickerBlock(
+            modifier = Modifier
+                .size(150.dp)
+                .align(Alignment.CenterHorizontally),
+            blockShape = BlockShape.CIRCLE_BLOCK,
+            text = stringResource(R.string.pic_personal_image)
+        ) { uri ->
+        }
 
-    EditText(
-        inputType = KeyboardType.Text,
-        modifier = Modifier.fillMaxWidth(),
-        hint = stringResource(R.string.user_name)
-    ) { text -> }
+        VerticalSpace(8.dp)
 
-    VerticalSpace(8.dp)
+        EditText(
+            inputType = KeyboardType.Text,
+            modifier = Modifier.fillMaxWidth(),
+            hint = stringResource(R.string.user_name)
+        ) { text -> }
 
-    EditText(
-        inputType = KeyboardType.Phone,
-        modifier = Modifier.fillMaxWidth(),
-        hint = stringResource(R.string.phone)
-    ) { text -> }
+        VerticalSpace(8.dp)
 
-    VerticalSpace(8.dp)
+        EditText(
+            inputType = KeyboardType.Phone,
+            modifier = Modifier.fillMaxWidth(),
+            hint = stringResource(R.string.phone)
+        ) { text -> }
 
-    EditText(
-        inputType = KeyboardType.Email,
-        modifier = Modifier.fillMaxWidth(),
-        hint = stringResource(R.string.email)
-    ) { text -> }
+        VerticalSpace(8.dp)
+
+        EditText(
+            inputType = KeyboardType.Email,
+            modifier = Modifier.fillMaxWidth(),
+            hint = stringResource(R.string.email)
+        ) { text -> }
+    }
 }
 
 @Composable
 fun CardIDSection() {
-    Text(
-        color = Black,
-        fontSize = 20.sp,
-        textAlign = TextAlign.Right,
-        text = stringResource(R.string.personal_card)
-    )
+    Column(
+        horizontalAlignment = Alignment.End,
+        verticalArrangement = Arrangement.Center,
+    ) {
+        Text(
+            color = Black,
+            fontSize = 20.sp,
+            textAlign = TextAlign.Right,
+            text = stringResource(R.string.personal_card)
+        )
 
-    VerticalSpace(8.dp)
+        VerticalSpace(8.dp)
 
-    Row {
-        ImagePickerBlock(
-            modifier = Modifier
-                .weight(1f)
-                .height(150.dp),
-            text = stringResource(R.string.back_id_image)
-        ) { uri ->
-        }
+        Row {
+            ImagePickerBlock(
+                modifier = Modifier
+                    .weight(1f)
+                    .height(150.dp),
+                blockShape = BlockShape.RECTANGLE_BLOCK,
+                text = stringResource(R.string.back_id_image)
+            ) { uri ->
+            }
 
-        HorizontalSpace(8.dp)
+            HorizontalSpace(8.dp)
 
-        ImagePickerBlock(
-            modifier = Modifier
-                .weight(1f)
-                .height(150.dp),
-            text = stringResource(R.string.front_id_image)
-        ) { uri ->
+            ImagePickerBlock(
+                modifier = Modifier
+                    .weight(1f)
+                    .height(150.dp),
+                blockShape = BlockShape.RECTANGLE_BLOCK,
+                text = stringResource(R.string.front_id_image)
+            ) { uri ->
+            }
         }
     }
 }
 
 @Composable
 fun VehicleSection() {
-    Text(
-        color = Black,
-        fontSize = 20.sp,
-        textAlign = TextAlign.Right,
-        text = stringResource(R.string.vehicle_details)
-    )
 
-    VerticalSpace(8.dp)
+    Column(
+        horizontalAlignment = Alignment.End,
+        verticalArrangement = Arrangement.Center,
+    ) {
+        Text(
+            color = Black,
+            fontSize = 20.sp,
+            textAlign = TextAlign.Right,
+            text = stringResource(R.string.vehicle_details)
+        )
 
-    CustomRadioButton(
-        options = Vehicle.entries,
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(horizontal = 2.dp),
-        orientation = Orientation.Horizontal
-    ) { selectedVehicle ->
-    }
+        VerticalSpace(8.dp)
 
-    VerticalSpace(8.dp)
+        CustomRadioButton(
+            options = Vehicle.entries,
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 2.dp),
+            orientation = Orientation.Horizontal
+        ) { selectedVehicle ->
+        }
 
-    ImagePickerBlock(
-        modifier = Modifier
-            .fillMaxWidth(1f)
-            .height(150.dp),
-        text = stringResource(R.string.pic_vehicle_image)
-    ) { uri ->
+        VerticalSpace(8.dp)
+
+        ImagePickerBlock(
+            modifier = Modifier
+                .fillMaxWidth(1f)
+                .height(150.dp),
+            blockShape = BlockShape.RECTANGLE_BLOCK,
+            text = stringResource(R.string.pic_vehicle_image)
+        ) { uri ->
+        }
     }
 }
