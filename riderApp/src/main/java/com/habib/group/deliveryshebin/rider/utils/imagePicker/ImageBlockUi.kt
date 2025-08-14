@@ -27,14 +27,17 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.rememberAsyncImagePainter
 import com.habib.group.deliveryshebin.rider.R
+import com.habib.group.deliveryshebin.rider.utils.ShowActionDialog
 import com.habib.group.deliveryshebin.rider.utils.imagePicker.utils.FileProviderHelper
 import com.habib.group.deliveryshebin.rider.utils.imagePicker.utils.UriConfig
 import com.habib.group.deliveryshebin.rider.utils.imagePicker.utils.askForCameraPermission
 import com.habib.group.deliveryshebin.rider.utils.imagePicker.utils.launchCamera
+import com.habib.group.deliveryshebin.rider.utils.openSettings
 import com.habib.group.deliveryshebin.rider.utils.theme.Black
 
 
@@ -49,6 +52,7 @@ fun ImagePickerBlock(
     val fileProviderHelper by lazy { FileProviderHelper(context) }
     var cameraIconVisibility by remember { mutableStateOf(true) }
     var selectedImageToShow by remember { mutableStateOf<Uri?>(null) }
+    var showAppSettingDialog by remember { mutableStateOf(false) }
 
     val imageUri = fileProviderHelper.getUri()
 
@@ -64,6 +68,8 @@ fun ImagePickerBlock(
     val startCameraPicker = askForCameraPermission { isGranted ->
         if (isGranted) {
             cameraLauncher.launch(imageUri)
+        } else {
+            showAppSettingDialog = true
         }
     }
 
@@ -121,6 +127,20 @@ fun ImagePickerBlock(
                         cameraIconVisibility = true
                     },
                 painter = painterResource(R.drawable.ic_close),
+            )
+        }
+
+        if (showAppSettingDialog) {
+            ShowActionDialog(
+                title = stringResource(R.string.open_app_settings),
+                message = stringResource(R.string.camera_permission_denied),
+                positiveButtonText = stringResource(R.string.ok),
+                onPositiveClick = {
+                    context.openSettings()
+                    showAppSettingDialog = false
+                },
+                negativeButtonText = stringResource(R.string.cancel),
+                onNegativeClick = { showAppSettingDialog = false }
             )
         }
     }

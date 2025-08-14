@@ -31,4 +31,8 @@
     <string name="motocycle">موتوسيكل</string>
     <string name="toktok">توكتوك</string>
     <string name="pic_personal_image">التقط صورة شخصية</string>
+    <string name="camera_permission_denied">تم رفض إذن فتح الكاميرا. من فضلك قم بفتح اعدادات التطبيق وقم بتفعيل أذن الوصول للكاميرا يدويا لكي تتمكن من التقاط الصورة</string>
+    <string name="ok">موافق</string>
+    <string name="cancel">إلغاء</string>
+    <string name="open_app_settings">فتح أعدادات التطبيق</string>
 </resources>
