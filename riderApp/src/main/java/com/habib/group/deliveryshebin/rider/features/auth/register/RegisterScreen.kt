@@ -12,14 +12,11 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
@@ -107,9 +104,7 @@ fun RegisterScreen() {
             textColor = White,
             backgroundColor = Orange,
             text = stringResource(R.string.submit),
-        ) {
-
-        }
+        ) { }
     }
 }
 
@@ -177,8 +172,7 @@ fun CardIDSection() {
                     .height(150.dp),
                 blockShape = BlockShape.RECTANGLE_BLOCK,
                 text = stringResource(R.string.back_id_image)
-            ) { uri ->
-            }
+            ) { uri -> }
 
             HorizontalSpace(8.dp)
 
@@ -188,8 +182,7 @@ fun CardIDSection() {
                     .height(150.dp),
                 blockShape = BlockShape.RECTANGLE_BLOCK,
                 text = stringResource(R.string.front_id_image)
-            ) { uri ->
-            }
+            ) { uri -> }
         }
     }
 }
@@ -216,8 +209,7 @@ fun VehicleSection() {
                 .fillMaxWidth()
                 .padding(horizontal = 2.dp),
             orientation = Orientation.Horizontal
-        ) { selectedVehicle ->
-        }
+        ) { selectedVehicle -> }
 
         VerticalSpace(8.dp)
 
@@ -227,7 +219,6 @@ fun VehicleSection() {
                 .height(150.dp),
             blockShape = BlockShape.RECTANGLE_BLOCK,
             text = stringResource(R.string.pic_vehicle_image)
-        ) { uri ->
-        }
+        ) { uri -> }
     }
 }
