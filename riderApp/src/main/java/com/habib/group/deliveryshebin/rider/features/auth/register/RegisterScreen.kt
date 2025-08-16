@@ -5,7 +5,6 @@ import androidx.compose.foundation.gestures.Orientation
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -26,17 +25,16 @@ import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.Dimension
 import com.habib.group.deliveryshebin.rider.R
 import com.habib.group.deliveryshebin.rider.features.auth.register.domain.Vehicle
-import com.habib.group.deliveryshebin.rider.utils.commonUI.CustomButton
-import com.habib.group.deliveryshebin.rider.utils.commonUI.CustomRadioButton
-import com.habib.group.deliveryshebin.rider.utils.commonUI.EditText
-import com.habib.group.deliveryshebin.rider.utils.commonUI.HorizontalSpace
-import com.habib.group.deliveryshebin.rider.utils.commonUI.VerticalSpace
-import com.habib.group.deliveryshebin.rider.utils.imagePicker.BlockShape
-import com.habib.group.deliveryshebin.rider.utils.imagePicker.ImagePickerBlock
 import com.habib.group.deliveryshebin.rider.theme.Black
 import com.habib.group.deliveryshebin.rider.theme.Orange
 import com.habib.group.deliveryshebin.rider.theme.Primary
 import com.habib.group.deliveryshebin.rider.theme.White
+import com.habib.group.deliveryshebin.rider.utils.commonUI.CustomButton
+import com.habib.group.deliveryshebin.rider.utils.commonUI.CustomRadioButton
+import com.habib.group.deliveryshebin.rider.utils.commonUI.EditText
+import com.habib.group.deliveryshebin.rider.utils.commonUI.VerticalSpace
+import com.habib.group.deliveryshebin.rider.utils.imagePicker.BlockShape
+import com.habib.group.deliveryshebin.rider.utils.imagePicker.ImagePickerBlock
 
 
 @Composable
@@ -165,23 +163,24 @@ fun CardIDSection() {
 
         VerticalSpace(8.dp)
 
-        Row {
-            ImagePickerBlock(
-                modifier = Modifier
-                    .weight(1f)
-                    .height(150.dp),
-                blockShape = BlockShape.RECTANGLE_BLOCK,
-                text = stringResource(R.string.back_id_image)
-            ) { uri -> }
-
-            HorizontalSpace(8.dp)
+        Column {
 
             ImagePickerBlock(
                 modifier = Modifier
-                    .weight(1f)
+                    .fillMaxWidth()
                     .height(150.dp),
                 blockShape = BlockShape.RECTANGLE_BLOCK,
                 text = stringResource(R.string.front_id_image)
+            ) { uri -> }
+
+            VerticalSpace(8.dp)
+
+            ImagePickerBlock(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(150.dp),
+                blockShape = BlockShape.RECTANGLE_BLOCK,
+                text = stringResource(R.string.back_id_image)
             ) { uri -> }
         }
     }

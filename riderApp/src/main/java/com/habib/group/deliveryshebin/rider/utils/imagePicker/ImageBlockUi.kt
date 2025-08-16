@@ -32,13 +32,15 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.rememberAsyncImagePainter
 import com.habib.group.deliveryshebin.rider.R
+import com.habib.group.deliveryshebin.rider.theme.Black
+import com.habib.group.deliveryshebin.rider.theme.White
 import com.habib.group.deliveryshebin.rider.utils.ShowActionDialog
+import com.habib.group.deliveryshebin.rider.utils.commonUI.CustomIcon
 import com.habib.group.deliveryshebin.rider.utils.imagePicker.utils.FileProviderHelper
 import com.habib.group.deliveryshebin.rider.utils.imagePicker.utils.UriConfig
 import com.habib.group.deliveryshebin.rider.utils.imagePicker.utils.askForCameraPermission
 import com.habib.group.deliveryshebin.rider.utils.imagePicker.utils.launchCamera
 import com.habib.group.deliveryshebin.rider.utils.openSettings
-import com.habib.group.deliveryshebin.rider.theme.Black
 
 
 @Composable
@@ -46,7 +48,7 @@ fun ImagePickerBlock(
     text: String,
     blockShape: BlockShape,
     modifier: Modifier = Modifier,
-    onImageSelected: (Uri?) -> Unit
+    onImageSelected: (Uri?) -> Unit,
 ) {
     val context = LocalContext.current
     val fileProviderHelper by lazy { FileProviderHelper(context) }
@@ -110,23 +112,37 @@ fun ImagePickerBlock(
             }
         } else {
 
-            val align = when (blockShape) {
-                BlockShape.SELFIE -> Alignment.BottomCenter
-                BlockShape.RECTANGLE_BLOCK -> Alignment.TopEnd
+            val icon: Int
+            val iconSize: Int
+            val iconAlign: Alignment
+
+            when (blockShape) {
+                BlockShape.SELFIE -> {
+                    iconSize = 45
+                    icon = R.drawable.ic_photo_edit
+                    iconAlign = Alignment.BottomCenter
+                }
+
+                BlockShape.RECTANGLE_BLOCK -> {
+                    iconSize = 35
+                    icon = R.drawable.ic_close
+                    iconAlign = Alignment.TopEnd
+                }
             }
 
-            Image(
-                contentDescription = null,
+            CustomIcon(
+                size = iconSize,
+                iconId = icon,
+                iconColor = White,
+                containerColor = Color.Gray,
                 modifier = Modifier
-                    .size(45.dp)
                     .padding(8.dp)
-                    .align(align)
+                    .align(iconAlign)
                     .clickable {
                         onImageSelected(null)
                         selectedImageToShow = null
                         cameraIconVisibility = true
                     },
-                painter = painterResource(R.drawable.ic_close),
             )
         }
 
