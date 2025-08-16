@@ -30,8 +30,8 @@ import androidx.navigation.NavHostController
 import com.habib.group.deliveryshebin.rider.R
 import com.habib.group.deliveryshebin.rider.onBoardingDestination
 import com.habib.group.deliveryshebin.rider.utils.commonUI.VerticalSpace
-import com.habib.group.deliveryshebin.rider.utils.theme.Primary
-import com.habib.group.deliveryshebin.rider.utils.theme.White
+import com.habib.group.deliveryshebin.rider.theme.Primary
+import com.habib.group.deliveryshebin.rider.theme.White
 import kotlinx.coroutines.delay
 
 @Composable

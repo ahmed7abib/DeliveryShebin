@@ -16,4 +16,6 @@ fun getScreenHeight() = LocalConfiguration.current.screenHeightDp
 fun isLandscape() = LocalConfiguration.current.orientation == Configuration.ORIENTATION_LANDSCAPE
 
 @Composable
-fun arabicFontFamily() = FontFamily(Font(R.font.arabic_font_bold, FontWeight.Normal))
+fun arabicFontBold() = FontFamily(Font(R.font.arabic_font_bold, FontWeight.Normal))
+
+fun arabicFontLight() = FontFamily(Font(R.font.arabic_font_light, FontWeight.Light))

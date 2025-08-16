@@ -33,10 +33,10 @@ import com.habib.group.deliveryshebin.rider.utils.commonUI.HorizontalSpace
 import com.habib.group.deliveryshebin.rider.utils.commonUI.VerticalSpace
 import com.habib.group.deliveryshebin.rider.utils.imagePicker.BlockShape
 import com.habib.group.deliveryshebin.rider.utils.imagePicker.ImagePickerBlock
-import com.habib.group.deliveryshebin.rider.utils.theme.Black
-import com.habib.group.deliveryshebin.rider.utils.theme.Orange
-import com.habib.group.deliveryshebin.rider.utils.theme.Primary
-import com.habib.group.deliveryshebin.rider.utils.theme.White
+import com.habib.group.deliveryshebin.rider.theme.Black
+import com.habib.group.deliveryshebin.rider.theme.Orange
+import com.habib.group.deliveryshebin.rider.theme.Primary
+import com.habib.group.deliveryshebin.rider.theme.White
 
 
 @Composable

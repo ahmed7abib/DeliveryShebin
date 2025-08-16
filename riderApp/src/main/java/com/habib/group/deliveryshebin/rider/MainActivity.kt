@@ -12,7 +12,7 @@ import com.habib.group.deliveryshebin.rider.features.auth.register.RegisterScree
 import com.habib.group.deliveryshebin.rider.features.home.HomeScreen
 import com.habib.group.deliveryshebin.rider.features.on_boarding.OnBoardingScreen
 import com.habib.group.deliveryshebin.rider.features.splash.SplashScreen
-import com.habib.group.deliveryshebin.rider.utils.theme.DeliveryShebinTheme
+import com.habib.group.deliveryshebin.rider.theme.DeliveryShebinTheme
 
 
 class MainActivity : ComponentActivity() {

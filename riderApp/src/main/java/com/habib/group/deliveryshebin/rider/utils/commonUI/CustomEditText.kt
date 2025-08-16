@@ -14,8 +14,8 @@ import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.LayoutDirection
-import com.habib.group.deliveryshebin.rider.utils.theme.Black
-import com.habib.group.deliveryshebin.rider.utils.theme.White
+import com.habib.group.deliveryshebin.rider.theme.Black
+import com.habib.group.deliveryshebin.rider.theme.White
 
 @Composable
 @OptIn(ExperimentalMaterial3Api::class)

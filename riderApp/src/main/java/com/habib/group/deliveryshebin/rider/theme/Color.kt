@@ -1,4 +1,4 @@
-package com.habib.group.deliveryshebin.rider.utils.theme
+package com.habib.group.deliveryshebin.rider.theme
 
 import androidx.compose.ui.graphics.Color
 

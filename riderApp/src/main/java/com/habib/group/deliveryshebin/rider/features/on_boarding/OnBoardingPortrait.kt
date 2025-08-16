@@ -32,11 +32,11 @@ import com.habib.group.deliveryshebin.rider.R
 import com.habib.group.deliveryshebin.rider.features.splash.Header
 import com.habib.group.deliveryshebin.rider.utils.commonUI.CustomButton
 import com.habib.group.deliveryshebin.rider.utils.commonUI.VerticalSpace
-import com.habib.group.deliveryshebin.rider.utils.theme.Black
-import com.habib.group.deliveryshebin.rider.utils.theme.Orange2
-import com.habib.group.deliveryshebin.rider.utils.theme.Primary
-import com.habib.group.deliveryshebin.rider.utils.theme.Secondary
-import com.habib.group.deliveryshebin.rider.utils.theme.White
+import com.habib.group.deliveryshebin.rider.theme.Black
+import com.habib.group.deliveryshebin.rider.theme.Orange2
+import com.habib.group.deliveryshebin.rider.theme.Primary
+import com.habib.group.deliveryshebin.rider.theme.Secondary
+import com.habib.group.deliveryshebin.rider.theme.White
 
 @Composable
 @OptIn(ExperimentalFoundationApi::class)

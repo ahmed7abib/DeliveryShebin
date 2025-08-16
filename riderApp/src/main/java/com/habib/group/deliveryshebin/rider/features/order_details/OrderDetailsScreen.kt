@@ -5,6 +5,6 @@ import androidx.compose.ui.Modifier
 
 
 @Composable
-fun OrderDetails(modifier: Modifier = Modifier) {
+fun OrderDetailsScreen(modifier: Modifier = Modifier) {
 
 }

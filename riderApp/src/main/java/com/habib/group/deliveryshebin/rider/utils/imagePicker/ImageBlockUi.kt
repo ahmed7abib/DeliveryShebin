@@ -38,7 +38,7 @@ import com.habib.group.deliveryshebin.rider.utils.imagePicker.utils.UriConfig
 import com.habib.group.deliveryshebin.rider.utils.imagePicker.utils.askForCameraPermission
 import com.habib.group.deliveryshebin.rider.utils.imagePicker.utils.launchCamera
 import com.habib.group.deliveryshebin.rider.utils.openSettings
-import com.habib.group.deliveryshebin.rider.utils.theme.Black
+import com.habib.group.deliveryshebin.rider.theme.Black
 
 
 @Composable

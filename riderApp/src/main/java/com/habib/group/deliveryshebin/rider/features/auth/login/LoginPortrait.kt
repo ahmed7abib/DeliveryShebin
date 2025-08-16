@@ -24,10 +24,10 @@ import com.habib.group.deliveryshebin.rider.R
 import com.habib.group.deliveryshebin.rider.features.splash.Header
 import com.habib.group.deliveryshebin.rider.utils.commonUI.CustomButton
 import com.habib.group.deliveryshebin.rider.utils.commonUI.VerticalSpace
-import com.habib.group.deliveryshebin.rider.utils.theme.Black
-import com.habib.group.deliveryshebin.rider.utils.theme.Orange
-import com.habib.group.deliveryshebin.rider.utils.theme.Primary
-import com.habib.group.deliveryshebin.rider.utils.theme.White
+import com.habib.group.deliveryshebin.rider.theme.Black
+import com.habib.group.deliveryshebin.rider.theme.Orange
+import com.habib.group.deliveryshebin.rider.theme.Primary
+import com.habib.group.deliveryshebin.rider.theme.White
 
 
 @Composable
@@ -147,6 +147,6 @@ private fun PortraitFooterSection() {
         textAlign = TextAlign.Center,
         fontStyle = FontStyle.Normal,
         text = stringResource(R.string.privacy_policy_hint),
-        fontFamily = FontFamily(Font(R.font.arabic_font_lite))
+        fontFamily = FontFamily(Font(R.font.arabic_font_light))
     )
 }

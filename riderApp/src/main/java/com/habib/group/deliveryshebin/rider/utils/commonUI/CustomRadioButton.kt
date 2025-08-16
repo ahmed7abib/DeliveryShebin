@@ -19,8 +19,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.sp
 import com.habib.group.deliveryshebin.rider.features.auth.register.domain.Vehicle
-import com.habib.group.deliveryshebin.rider.utils.theme.Primary
-import com.habib.group.deliveryshebin.rider.utils.theme.Secondary
+import com.habib.group.deliveryshebin.rider.theme.Primary
+import com.habib.group.deliveryshebin.rider.theme.Secondary
 
 
 @Composable

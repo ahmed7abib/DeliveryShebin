@@ -14,9 +14,9 @@ import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.DialogProperties
-import com.habib.group.deliveryshebin.rider.utils.theme.Black
-import com.habib.group.deliveryshebin.rider.utils.theme.Orange
-import com.habib.group.deliveryshebin.rider.utils.theme.White
+import com.habib.group.deliveryshebin.rider.theme.Black
+import com.habib.group.deliveryshebin.rider.theme.Orange
+import com.habib.group.deliveryshebin.rider.theme.White
 import io.github.farhanroy.composeawesomedialog.ComposeAwesomeDialog
 import io.github.farhanroy.composeawesomedialog.utils.ComposeAwesomeDialogType
 
@@ -44,7 +44,7 @@ fun ShowActionDialog(
                 color = White,
                 fontSize = 18.sp,
                 textAlign = align,
-                fontFamily = arabicFontFamily()
+                fontFamily = arabicFontBold()
             )
         },
         text = {
@@ -53,7 +53,7 @@ fun ShowActionDialog(
                 text = message,
                 fontSize = 12.sp,
                 textAlign = align,
-                fontFamily = arabicFontFamily()
+                fontFamily = arabicFontBold()
             )
         },
         properties = DialogProperties(
@@ -70,7 +70,7 @@ fun ShowActionDialog(
                 Text(
                     color = Black,
                     text = positiveButtonText,
-                    fontFamily = arabicFontFamily()
+                    fontFamily = arabicFontBold()
                 )
             }
         },
@@ -79,7 +79,7 @@ fun ShowActionDialog(
                 Text(
                     color = Black,
                     text = negativeButtonText,
-                    fontFamily = arabicFontFamily()
+                    fontFamily = arabicFontBold()
                 )
             }
         },

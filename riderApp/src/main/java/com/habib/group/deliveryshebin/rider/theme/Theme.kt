@@ -1,4 +1,4 @@
-package com.habib.group.deliveryshebin.rider.utils.theme
+package com.habib.group.deliveryshebin.rider.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
@@ -11,7 +11,7 @@ import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.TextStyle
-import com.habib.group.deliveryshebin.rider.utils.arabicFontFamily
+import com.habib.group.deliveryshebin.rider.utils.arabicFontBold
 
 
 private val DarkColorScheme = darkColorScheme(
@@ -43,9 +43,9 @@ fun DeliveryShebinTheme(
     }
 
     val customTypography = Typography(
-        bodyLarge = TextStyle(fontFamily = arabicFontFamily()),
-        titleLarge = TextStyle(fontFamily = arabicFontFamily()),
-        labelSmall = TextStyle(fontFamily = arabicFontFamily())
+        bodyLarge = TextStyle(fontFamily = arabicFontBold()),
+        titleLarge = TextStyle(fontFamily = arabicFontBold()),
+        labelSmall = TextStyle(fontFamily = arabicFontBold())
     )
 
     MaterialTheme(
